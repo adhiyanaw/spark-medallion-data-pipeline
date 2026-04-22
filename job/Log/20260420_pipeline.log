@@ -1,0 +1,152 @@
+2026-04-20 02:17:32,609 - INFO - Pipeline started
+2026-04-20 02:17:52,187 - INFO - Valid count: 12
+2026-04-20 02:17:53,200 - INFO - Rejected count: 5
+2026-04-20 02:17:56,148 - INFO - Pipeline finished in 23.54 seconds
+2026-04-20 02:17:56,770 - INFO - Closing down clientserver connection
+2026-04-20 03:13:22,036 - INFO - Pipeline started
+2026-04-20 03:13:41,854 - INFO - Valid count: 12
+2026-04-20 03:13:42,978 - INFO - Rejected count: 5
+2026-04-20 03:13:42,994 - INFO - Writing Bronze outputs...
+2026-04-20 03:13:45,895 - INFO - Pipeline completed successfully
+2026-04-20 03:13:45,895 - INFO - Pipeline finished in 23.86 seconds
+2026-04-20 03:13:46,287 - INFO - Closing down clientserver connection
+2026-04-20 11:21:15,922 - INFO - Pipeline started
+2026-04-20 11:21:35,429 - INFO - Valid count: 12
+2026-04-20 11:21:36,531 - INFO - Rejected count: 5
+2026-04-20 11:21:36,544 - INFO - Writing Bronze outputs...
+2026-04-20 11:21:40,185 - INFO - Pipeline completed successfully
+2026-04-20 11:21:40,185 - INFO - Pipeline finished in 24.26 seconds
+2026-04-20 11:21:40,328 - INFO - Closing down clientserver connection
+2026-04-20 11:27:55,272 - INFO - Pipeline started
+2026-04-20 11:28:14,197 - INFO - Valid count: 12
+2026-04-20 11:28:15,452 - INFO - Rejected count: 5
+2026-04-20 11:28:15,466 - INFO - Writing Bronze outputs...
+2026-04-20 11:28:18,946 - INFO - Pipeline completed successfully
+2026-04-20 11:28:18,946 - INFO - Pipeline finished in 23.67 seconds
+2026-04-20 11:28:19,065 - INFO - Closing down clientserver connection
+2026-04-20 11:30:30,363 - INFO - Pipeline started
+2026-04-20 11:30:54,409 - INFO - Valid count: 12
+2026-04-20 11:30:55,782 - INFO - Rejected count: 5
+2026-04-20 11:30:55,796 - INFO - Writing Bronze outputs...
+2026-04-20 11:31:00,095 - INFO - Pipeline completed successfully
+2026-04-20 11:31:00,095 - INFO - Pipeline finished in 29.73 seconds
+2026-04-20 11:31:00,546 - INFO - Closing down clientserver connection
+2026-04-20 11:39:55,293 - INFO - Pipeline started
+2026-04-20 11:40:15,892 - INFO - Valid count: 12
+2026-04-20 11:40:17,001 - INFO - Rejected count: 5
+2026-04-20 11:40:17,015 - INFO - Writing Bronze outputs...
+2026-04-20 11:40:20,879 - INFO - Pipeline completed successfully
+2026-04-20 11:40:20,879 - INFO - Pipeline finished in 25.59 seconds
+2026-04-20 11:40:21,224 - INFO - Closing down clientserver connection
+2026-04-20 15:32:35,487 - INFO - Pipeline started
+2026-04-20 15:32:55,661 - INFO - Valid count: 12
+2026-04-20 15:32:56,818 - INFO - Rejected count: 5
+2026-04-20 15:32:56,831 - INFO - Writing Bronze outputs...
+2026-04-20 15:33:00,240 - INFO - Pipeline completed successfully
+2026-04-20 15:33:00,240 - INFO - Pipeline finished in 24.75 seconds
+2026-04-20 15:33:00,831 - INFO - Closing down clientserver connection
+2026-04-20 15:34:30,479 - INFO - Pipeline started
+2026-04-20 15:34:49,280 - INFO - Valid count: 12
+2026-04-20 15:34:50,345 - INFO - Rejected count: 5
+2026-04-20 15:34:50,357 - INFO - Writing Bronze outputs...
+2026-04-20 15:34:53,507 - INFO - Pipeline completed successfully
+2026-04-20 15:34:53,507 - INFO - Pipeline finished in 23.03 seconds
+2026-04-20 15:34:53,865 - INFO - Closing down clientserver connection
+2026-04-20 16:09:56,521 - INFO - Pipeline started
+2026-04-20 16:10:14,638 - INFO - Valid count: 12
+2026-04-20 16:10:15,788 - INFO - Rejected count: 5
+2026-04-20 16:10:15,802 - INFO - Writing Bronze outputs...
+2026-04-20 16:10:19,129 - INFO - Pipeline completed successfully
+2026-04-20 16:10:19,130 - INFO - Pipeline finished in 22.61 seconds
+2026-04-20 16:10:19,616 - INFO - Closing down clientserver connection
+2026-04-20 16:49:47,869 - INFO - Pipeline started
+2026-04-20 16:50:07,914 - INFO - Valid count: 12
+2026-04-20 16:50:09,085 - INFO - Rejected count: 5
+2026-04-20 16:50:09,098 - INFO - Writing Bronze outputs...
+2026-04-20 16:50:14,055 - INFO - Writing Silver outputs...
+2026-04-20 16:50:14,778 - ERROR - Pipeline failed: [CAST_INVALID_INPUT] The value 'invalid_date' of the type "STRING" cannot be cast to "DATE" because it is malformed. Correct the value as per the syntax, or change its target type. Use `try_cast` to tolerate malformed input and return NULL instead. SQLSTATE: 22018
+== DataFrame ==
+"to_date" was called from
+java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+Traceback (most recent call last):
+  File "/Users/macbook/distribute/job/pipeline.py", line 179, in main
+    .parquet(f"{silver_path}/events_enriched")
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/pyspark/sql/readwriter.py", line 2003, in parquet
+    self._jwrite.parquet(path)
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/py4j/java_gateway.py", line 1362, in __call__
+    return_value = get_return_value(
+                   ^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/pyspark/errors/exceptions/captured.py", line 269, in deco
+    raise converted from None
+pyspark.errors.exceptions.captured.DateTimeException: [CAST_INVALID_INPUT] The value 'invalid_date' of the type "STRING" cannot be cast to "DATE" because it is malformed. Correct the value as per the syntax, or change its target type. Use `try_cast` to tolerate malformed input and return NULL instead. SQLSTATE: 22018
+== DataFrame ==
+"to_date" was called from
+java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+
+2026-04-20 16:56:14,043 - INFO - Pipeline started
+2026-04-20 16:56:37,456 - INFO - Valid count: 12
+2026-04-20 16:56:39,180 - INFO - Rejected count: 5
+2026-04-20 16:56:39,200 - INFO - Writing Bronze outputs...
+2026-04-20 16:56:45,216 - INFO - Writing Silver outputs...
+2026-04-20 16:56:46,228 - INFO - Pipeline completed successfully
+2026-04-20 16:56:46,228 - INFO - Pipeline finished in 32.19 seconds
+2026-04-20 16:56:46,807 - INFO - Closing down clientserver connection
+2026-04-20 17:13:38,897 - INFO - Pipeline started
+2026-04-20 17:13:51,394 - ERROR - Pipeline failed: [UNRESOLVED_COLUMN.WITH_SUGGESTION] A column, variable, or function parameter with name `event_ts_parsed` cannot be resolved. Did you mean one of the following? [`event_type`, `event_date`, `event_ts`, `event_id`, `event_timestamp`]. SQLSTATE: 42703;
+'Filter 'and((((isnotnull(event_id#0) AND isnotnull(user_id#1)) AND NOT (user_id#1 = )) AND isnotnull(event_type#6)), 'isNotNull('event_ts_parsed))
++- Project [event_id#0, user_id#1, event_type#6, event_ts#3, value#10, event_timestamp#7, to_date(event_timestamp#7, None, Some(Asia/Jakarta), true) AS event_date#11]
+   +- Project [event_id#0, user_id#1, event_type#6, event_ts#3, coalesce(value#9, 0.0) AS value#10, event_timestamp#7]
+      +- Project [event_id#0, user_id#1, event_type#6, event_ts#3, cast(value#8 as double) AS value#9, event_timestamp#7]
+         +- Project [event_id#0, user_id#1, event_type#6, event_ts#3, cast(value#4 as double) AS value#8, event_timestamp#7]
+            +- Project [event_id#0, user_id#1, event_type#6, event_ts#3, value#4, try_to_timestamp(event_ts#3, None, TimestampType, Some(Asia/Jakarta), false) AS event_timestamp#7]
+               +- Project [event_id#0, user_id#1, lower(event_type#2) AS event_type#6, event_ts#3, value#4]
+                  +- Relation [event_id#0,user_id#1,event_type#2,event_ts#3,value#4] json
+Traceback (most recent call last):
+  File "/Users/macbook/distribute/job/pipeline.py", line 97, in main
+    df_valid = df_cleaned.filter(
+               ^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/pyspark/sql/classic/dataframe.py", line 1036, in filter
+    jdf = self._jdf.filter(condition._jc)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/py4j/java_gateway.py", line 1362, in __call__
+    return_value = get_return_value(
+                   ^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/pyspark/errors/exceptions/captured.py", line 269, in deco
+    raise converted from None
+pyspark.errors.exceptions.captured.AnalysisException: [UNRESOLVED_COLUMN.WITH_SUGGESTION] A column, variable, or function parameter with name `event_ts_parsed` cannot be resolved. Did you mean one of the following? [`event_type`, `event_date`, `event_ts`, `event_id`, `event_timestamp`]. SQLSTATE: 42703;
+'Filter 'and((((isnotnull(event_id#0) AND isnotnull(user_id#1)) AND NOT (user_id#1 = )) AND isnotnull(event_type#6)), 'isNotNull('event_ts_parsed))
++- Project [event_id#0, user_id#1, event_type#6, event_ts#3, value#10, event_timestamp#7, to_date(event_timestamp#7, None, Some(Asia/Jakarta), true) AS event_date#11]
+   +- Project [event_id#0, user_id#1, event_type#6, event_ts#3, coalesce(value#9, 0.0) AS value#10, event_timestamp#7]
+      +- Project [event_id#0, user_id#1, event_type#6, event_ts#3, cast(value#8 as double) AS value#9, event_timestamp#7]
+         +- Project [event_id#0, user_id#1, event_type#6, event_ts#3, cast(value#4 as double) AS value#8, event_timestamp#7]
+            +- Project [event_id#0, user_id#1, event_type#6, event_ts#3, value#4, try_to_timestamp(event_ts#3, None, TimestampType, Some(Asia/Jakarta), false) AS event_timestamp#7]
+               +- Project [event_id#0, user_id#1, lower(event_type#2) AS event_type#6, event_ts#3, value#4]
+                  +- Relation [event_id#0,user_id#1,event_type#2,event_ts#3,value#4] json
+
+2026-04-20 17:13:51,425 - INFO - Closing down clientserver connection
+2026-04-20 17:14:23,440 - INFO - Pipeline started
+2026-04-20 17:14:41,121 - INFO - Valid count: 12
+2026-04-20 17:14:42,776 - INFO - Rejected count: 5
+2026-04-20 17:14:42,786 - INFO - Writing Bronze outputs...
+2026-04-20 17:14:48,617 - INFO - Writing Silver outputs...
+2026-04-20 17:14:49,499 - INFO - Pipeline completed successfully
+2026-04-20 17:14:49,499 - INFO - Pipeline finished in 26.06 seconds
+2026-04-20 17:14:49,735 - INFO - Closing down clientserver connection
+2026-04-20 17:36:08,217 - INFO - Pipeline started
+2026-04-20 17:36:26,461 - INFO - Valid count: 12
+2026-04-20 17:36:27,756 - INFO - Rejected count: 5
+2026-04-20 17:36:27,769 - INFO - Writing Bronze outputs...
+2026-04-20 17:36:31,924 - INFO - Writing Silver outputs...
+2026-04-20 17:36:32,745 - INFO - Pipeline completed successfully
+2026-04-20 17:36:32,745 - INFO - Pipeline finished in 24.53 seconds
+2026-04-20 17:36:33,210 - INFO - Closing down clientserver connection
+2026-04-20 17:38:41,697 - INFO - Pipeline started
+2026-04-20 17:38:59,262 - INFO - Valid count: 12
+2026-04-20 17:39:00,368 - INFO - Rejected count: 5
+2026-04-20 17:39:00,383 - INFO - Writing Bronze outputs...
+2026-04-20 17:39:04,435 - INFO - Writing Silver outputs...
+2026-04-20 17:39:05,511 - INFO - Writing Gold outputs...
+2026-04-20 17:39:06,470 - INFO - Pipeline completed successfully
+2026-04-20 17:39:06,470 - INFO - Pipeline finished in 24.77 seconds
+2026-04-20 17:39:06,774 - INFO - Closing down clientserver connection
