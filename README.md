@@ -25,15 +25,16 @@ This project implements a batch data pipeline using PySpark, following the Medal
 project/
 ├── job/
 │   └── pipeline.py
+│   └── Log/
 ├── config/
 │   └── pipeline.yaml
 ├── data/
 │   ├── raw/
 │   ├── reference/
-│   └── bronze/
-│   └── silver/
-│   └── gold/
-├── logs/
+│   └── output/
+│       └── bronze/
+│       └── silver/
+│       └── gold/
 └── README.md
 ```
 
