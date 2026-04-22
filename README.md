@@ -1,12 +1,25 @@
-# Data Engineering Pipeline (Bronze → Silver → Gold)
+
+# 🧱 Medallion Data Pipeline Using PySpark
 
 ## 📌 Overview
+This project implements a **Medallion Architecture (Bronze → Silver → Gold)** data pipeline using **PySpark**.
 
-This project implements a batch data pipeline using PySpark, following the Medallion Architecture:
+The pipeline processes raw event data, performs data cleaning and validation, enriches the dataset, and produces aggregated business-ready outputs.
 
-* **Bronze Layer** → Raw data ingestion, validation, and cleaning
-* **Silver Layer** → Data enrichment and transformation
-* **Gold Layer** → Aggregation for analytics and reporting
+---
+
+## 🏗️ Architecture
+
+Raw Data (JSON)
+    ↓
+Bronze Layer
+(Raw data ingestion, validation, and cleaning)
+    ↓
+Silver Layer
+(Data enrichment and transformation)
+    ↓
+Gold Layer
+(Aggregated Metrics)
 
 ---
 
@@ -52,6 +65,15 @@ pip install pyspark pyyaml
 
 ```bash
 python job/pipeline.py --config config/pipeline.yaml
+```
+
+### 3. See the results
+```python
+from pyspark.sql import SparkSession
+
+spark = SparkSession.builder.getOrCreate()
+df = spark.read.parquet("data/bronze/rejected_events") # adjust path's location
+df.show(truncate=False)
 ```
 
 ---
@@ -178,18 +200,6 @@ This pipeline demonstrates:
 * Business-level aggregation
 * Incremental processing strategy
 
-note : how to see/check the results
-----------------------------------------------------------------------------------------
-from pyspark.sql import SparkSession
-
-spark = SparkSession.builder.getOrCreate()
-df = spark.read.parquet("data/bronze/rejected_events") -- adjust path's location
-df.show(truncate=False)
-----------------------------------------------------------------------------------------
-
 
 ---
 
-## 👤 Author
-
-Adhiyana
