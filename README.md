@@ -49,6 +49,7 @@ project/
 │       └── silver/
 │       └── gold/
 └── README.md
+└── pyproject.toml
 ```
 
 ---
